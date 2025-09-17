@@ -1,25 +1,14 @@
 // vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'node:path'   // ⬅️ ESM-vriendelijk
+import { resolve } from 'node:path'
 
 export default defineConfig({
-  // Gebruik je GitHub Pages op repo-URL:
-  base: '/HumanPerformanceZeeland/',
-
+  base: '/', // root because username-pages lives at /
   plugins: [react()],
-
   resolve: {
-    alias: {
-      '@': resolve(process.cwd(), './src'),
-    },
-    extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
+    alias: { '@': resolve(process.cwd(), './src') },
+    extensions: ['.mjs','.js','.jsx','.ts','.tsx','.json']
   },
-
-  optimizeDeps: {
-    esbuildOptions: {
-      loader: { '.js': 'jsx' },
-    },
-  },
+  optimizeDeps: { esbuildOptions: { loader: { '.js': 'jsx' } } }
 })
-
