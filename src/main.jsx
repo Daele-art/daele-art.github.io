@@ -1,4 +1,5 @@
-// src/main.jsx
+import './index.css'        // <-- deze MOET bovenaan staan
+
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
