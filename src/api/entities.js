@@ -1,9 +1,1 @@
-import { base44 } from './base44Client';
-
-
-export const ContactBericht = base44.entities.ContactBericht;
-
-
-
-// auth sdk:
-export const User = base44.auth;
+import { base44 } from './baseClient'         // of '../baseClient' — gebruik het juiste relatieve pad
