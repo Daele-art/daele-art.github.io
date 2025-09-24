@@ -1,0 +1,20 @@
+// src/api/baseClient.js
+// Universele stub die elke (diep geneste) aanroep opvangt en een veilige Promise teruggeeft.
+// Voorbeeld: base44.entities.users.list() -> { ok:true, data:null }
+
+const ok = (data = null) => ({ ok: true, data });
+const noopAsync = async () => ok();
+
+// Diepe proxy die zowel property access als functie-aanroepen kan verwerken
+const deep = new Proxy(noopAsync, {
+  get: () => deep,                         // elke property geeft weer de deep proxy terug
+  apply: () => Promise.resolve(ok()),      // elke call () geeft een resolved Promise
+});
+
+export const base44 = new Proxy({}, {      // export met dezelfde naam als voorheen
+  get: () => deep,
+});
+
+// Eventueel handige helpers voor je eigen code:
+export const isConnected = () => false;    // je app kan dit gebruiken om UI te tonen/te verbergen
+export const getCurrentUser = async () => ok(null);
