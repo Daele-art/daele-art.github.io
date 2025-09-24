@@ -20,8 +20,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@humanperformancezeeland.nl", "We reageren binnen 24u"],
-      action: "mailto:info@humanperformancezeeland.nl"
+      details: ["humanperformancezeeland@gmail.nl", "We reageren binnen 24u"],
+      action: "mailto:humanperformancezeeland@gmail.nl"
     },
     {
       icon: MapPin,
