@@ -1,20 +1,10 @@
-# Base44 App
+# Human Performance Zeeland (HPZ) Website
 
+Dit project is een Vite + React app voor de website van **Human Performance Zeeland (HPZ)**.  
+De site is onafhankelijk van Base44 en draait nu volledig via GitHub Pages.
 
-This app was created automatically by Base44.
-It's a Vite+React app that communicates with the Base44 API.
-
-## Running the app
+## Running the app (development)
 
 ```bash
 npm install
 npm run dev
-```
-
-## Building the app
-
-```bash
-npm run build
-```
-
-For more information and support, please contact Base44 support at app@base44.com.
